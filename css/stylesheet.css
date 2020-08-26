@@ -1,0 +1,11 @@
+td { 
+    padding: 10px;
+}
+
+td.vivo {
+    background-color: rgb(64, 201, 37);
+}
+
+h1 {
+    text-align: center;
+}
