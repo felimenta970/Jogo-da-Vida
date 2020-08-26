@@ -1,5 +1,5 @@
 // Constante de tamanho do jogo
-const n = 40;
+const n = 35;
 const m = 90;
 
 // Variaveis para controle de execução
