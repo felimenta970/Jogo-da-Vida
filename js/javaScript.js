@@ -1,6 +1,11 @@
 // Constante de tamanho do jogo
-const n = 30;
-const m = 30;
+const n = 40;
+const m = 90;
+
+// Variaveis para controle de execução
+let comecou = false;
+let timer;
+let velEvolucao = 1000;
 
 // Variáveis para tabelas auxiliares
 let genAtual = [n];
@@ -13,6 +18,8 @@ function constroi_mundo() {
 
     // Variável auxlliar para a probabilidade da célula ser viva ou morta
     let aux = 0;
+
+    $('#areaJogo').empty(); // Limpa quaisquer elementos da área do jogo antes de começar
 
     // Pegamos do HTML a área onde construiremos o jogo
     let areaJogo = document.querySelector('#areaJogo');
@@ -189,5 +196,25 @@ function rodada() {
     proximaGen();
     atualizaGen();
     atualizaMundo();
+
+    if (comecou) {
+        timer = setTimeout(rodada, velEvolucao);
+    }
+
+}
+
+function comecaPara () {
+    let execucao = document.querySelector('#comecarParar');
+
+    if (!comecou) {
+        comecou = true;
+        execucao.value= 'Parar';
+        rodada();
+    } else {
+        comecou = false;
+        execucao.value = 'Começar';
+        clearTimeout(timer);
+    }
+
 
 }

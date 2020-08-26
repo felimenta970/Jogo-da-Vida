@@ -9,3 +9,17 @@ td.vivo {
 h1 {
     text-align: center;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    border: 1.5px rgb(64, 201, 37) solid;
+    border-radius: 7px;
+    color: rgb(58, 172, 36);
+    font-weight: 600;
+}
