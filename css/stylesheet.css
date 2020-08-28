@@ -1,9 +1,11 @@
+/* Tamanho de cada célula */
 td { 
     padding: 10px;
 }
 
+/* Cor da célula caso viva */
 td.vivo {
-    background-color: rgb(64, 201, 37);
+    background-color: rgb(105, 88, 216);
 }
 
 h1 {
@@ -16,11 +18,15 @@ body {
     text-align: center;
 }
 
-button {
-    background-color: white;
-    border: 1.5px rgb(64, 201, 37) solid;
+/* Customização do botão */
+button, button:active, button:focus, button:hover {
+    background-color: rgb(86, 74, 167);
+    border: 2px rgb(86, 74, 167) solid;
     border-radius: 7px;
-    color: rgb(58, 172, 36);
-    font-weight: 600;
-    padding: 10px 10px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    font-weight: bold;
+    outline: none;
+
 }
